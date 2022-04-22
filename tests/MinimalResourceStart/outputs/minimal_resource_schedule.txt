@@ -1,0 +1,590 @@
+
+==========================================================================
+Important Variables:
+--------------------
+Centric Country: Atlantis
+Resource Input File: inputs/minimal_resource_resources.xlsx
+Country Input File: inputs/minimal_resource_countries.xlsx
+Output File: outputs/minimal_resource_schedule.txt
+Output Count: 10
+Depth Bound: 8
+Frontier Size: 40
+Gamma: 0.95
+C: -0.01
+k: 1
+x_0: 0
+Import Percent: 0.5
+Export Percent: 0.25
+==========================================================================
+Execution Time (s): 14.014
+==========================================================================
+
+Schedule #1: 
+(TRANSFER (50.0 MetallicElements) From Carpania To Atlantis) EU: 39.9564
+(TRANSFORM (35x Alloys) Atlantis
+		(INPUTS: 
+			(Population: 35)
+			(MetallicElements: 70)
+			(Water: 105)) 
+		(OUTPUTS: 
+			(Population: 35)
+			(Water: 70)
+			(MetallicAlloys: 70)
+			(MetallicWaste: 70))) EU: 65.6023
+(TRANSFORM (17x Food) Atlantis
+		(INPUTS: 
+			(Population: 34)
+			(Timber: 34)
+			(Water: 51)
+			(LandArea: 51)) 
+		(OUTPUTS: 
+			(Population: 34)
+			(Water: 17)
+			(LandArea: 34)
+			(Food: 51)
+			(FoodWaste: 17))) EU: 194.0229
+(TRANSFER (11.5 Water) From Atlantis To Dinotopia) EU: -3.8885
+(TRANSFORM (11x Food) Atlantis
+		(INPUTS: 
+			(Population: 22)
+			(Timber: 22)
+			(Water: 33)
+			(LandArea: 33)) 
+		(OUTPUTS: 
+			(Population: 22)
+			(Water: 11)
+			(LandArea: 22)
+			(Food: 33)
+			(FoodWaste: 11))) EU: 91.4947
+(TRANSFER (63.25 Water) From Dinotopia To Atlantis) EU: 21.2558
+(TRANSFER (31.62 Water) From Dinotopia To Atlantis) EU: 8.4106
+(TRANSFORM (7x Housing) Atlantis
+		(INPUTS: 
+			(Population: 35)
+			(MetallicElements: 7)
+			(Timber: 35)
+			(Water: 21)
+			(MetallicAlloys: 7)) 
+		(OUTPUTS: 
+			(Population: 35)
+			(Water: 14)
+			(Housing: 7)
+			(HousingWaste: 7))) EU: 140.5074
+
+Schedule #2: 
+(TRANSFER (50.0 MetallicElements) From Carpania To Atlantis) EU: 39.9564
+(TRANSFORM (35x Alloys) Atlantis
+		(INPUTS: 
+			(Population: 35)
+			(MetallicElements: 70)
+			(Water: 105)) 
+		(OUTPUTS: 
+			(Population: 35)
+			(Water: 70)
+			(MetallicAlloys: 70)
+			(MetallicWaste: 70))) EU: 65.6023
+(TRANSFORM (17x Food) Atlantis
+		(INPUTS: 
+			(Population: 34)
+			(Timber: 34)
+			(Water: 51)
+			(LandArea: 51)) 
+		(OUTPUTS: 
+			(Population: 34)
+			(Water: 17)
+			(LandArea: 34)
+			(Food: 51)
+			(FoodWaste: 17))) EU: 194.0229
+(TRANSFER (37.5 Water) From Brobdingnag To Atlantis) EU: 12.5551
+(TRANSFORM (17x Food) Atlantis
+		(INPUTS: 
+			(Population: 34)
+			(Timber: 34)
+			(Water: 51)
+			(LandArea: 51)) 
+		(OUTPUTS: 
+			(Population: 34)
+			(Water: 17)
+			(LandArea: 34)
+			(Food: 51)
+			(FoodWaste: 17))) EU: 13.7939
+(TRANSFER (57.5 Water) From Dinotopia To Atlantis) EU: 18.8429
+(TRANSFORM (7x Housing) Atlantis
+		(INPUTS: 
+			(Population: 35)
+			(MetallicElements: 7)
+			(Timber: 35)
+			(Water: 21)
+			(MetallicAlloys: 7)) 
+		(OUTPUTS: 
+			(Population: 35)
+			(Water: 14)
+			(Housing: 7)
+			(HousingWaste: 7))) EU: 164.4805
+(TRANSFORM (7x Housing) Atlantis
+		(INPUTS: 
+			(Population: 35)
+			(MetallicElements: 7)
+			(Timber: 35)
+			(Water: 21)
+			(MetallicAlloys: 7)) 
+		(OUTPUTS: 
+			(Population: 35)
+			(Water: 14)
+			(Housing: 7)
+			(HousingWaste: 7))) EU: 140.5074
+
+Schedule #3: 
+(TRANSFER (50.0 MetallicElements) From Carpania To Atlantis) EU: 39.9564
+(TRANSFORM (17x Food) Atlantis
+		(INPUTS: 
+			(Population: 34)
+			(Timber: 34)
+			(Water: 51)
+			(LandArea: 51)) 
+		(OUTPUTS: 
+			(Population: 34)
+			(Water: 17)
+			(LandArea: 34)
+			(Food: 51)
+			(FoodWaste: 17))) EU: 227.0543
+(TRANSFER (12.75 Food) From Atlantis To Erewhon) EU: -14.0478
+(TRANSFER (60.0 Timber) From Erewhon To Atlantis) EU: 7.2347
+(TRANSFORM (17x Food) Atlantis
+		(INPUTS: 
+			(Population: 34)
+			(Timber: 34)
+			(Water: 51)
+			(LandArea: 51)) 
+		(OUTPUTS: 
+			(Population: 34)
+			(Water: 17)
+			(LandArea: 34)
+			(Food: 51)
+			(FoodWaste: 17))) EU: 13.7939
+(TRANSFORM (25x Alloys) Atlantis
+		(INPUTS: 
+			(Population: 25)
+			(MetallicElements: 50)
+			(Water: 75)) 
+		(OUTPUTS: 
+			(Population: 25)
+			(Water: 50)
+			(MetallicAlloys: 50)
+			(MetallicWaste: 50))) EU: 24.6452
+(TRANSFORM (7x Housing) Atlantis
+		(INPUTS: 
+			(Population: 35)
+			(MetallicElements: 7)
+			(Timber: 35)
+			(Water: 21)
+			(MetallicAlloys: 7)) 
+		(OUTPUTS: 
+			(Population: 35)
+			(Water: 14)
+			(Housing: 7)
+			(HousingWaste: 7))) EU: 164.4805
+(TRANSFORM (7x Housing) Atlantis
+		(INPUTS: 
+			(Population: 35)
+			(MetallicElements: 7)
+			(Timber: 35)
+			(Water: 21)
+			(MetallicAlloys: 7)) 
+		(OUTPUTS: 
+			(Population: 35)
+			(Water: 14)
+			(Housing: 7)
+			(HousingWaste: 7))) EU: 140.5074
+
+Schedule #4: 
+(TRANSFER (50.0 MetallicElements) From Carpania To Atlantis) EU: 39.9564
+(TRANSFORM (35x Alloys) Atlantis
+		(INPUTS: 
+			(Population: 35)
+			(MetallicElements: 70)
+			(Water: 105)) 
+		(OUTPUTS: 
+			(Population: 35)
+			(Water: 70)
+			(MetallicAlloys: 70)
+			(MetallicWaste: 70))) EU: 65.6023
+(TRANSFORM (7x Housing) Atlantis
+		(INPUTS: 
+			(Population: 35)
+			(MetallicElements: 7)
+			(Timber: 35)
+			(Water: 21)
+			(MetallicAlloys: 7)) 
+		(OUTPUTS: 
+			(Population: 35)
+			(Water: 14)
+			(Housing: 7)
+			(HousingWaste: 7))) EU: 308.492
+(TRANSFER (18.25 Water) From Atlantis To Brobdingnag) EU: -5.5237
+(TRANSFORM (11x Alloys) Atlantis
+		(INPUTS: 
+			(Population: 11)
+			(MetallicElements: 22)
+			(Water: 33)) 
+		(OUTPUTS: 
+			(Population: 11)
+			(Water: 22)
+			(MetallicAlloys: 22)
+			(MetallicWaste: 22))) EU: 0.8829
+(TRANSFORM (17x Food) Atlantis
+		(INPUTS: 
+			(Population: 34)
+			(Timber: 34)
+			(Water: 51)
+			(LandArea: 51)) 
+		(OUTPUTS: 
+			(Population: 34)
+			(Water: 17)
+			(LandArea: 34)
+			(Food: 51)
+			(FoodWaste: 17))) EU: 11.6753
+(TRANSFORM (16x Food) Atlantis
+		(INPUTS: 
+			(Population: 32)
+			(Timber: 32)
+			(Water: 48)
+			(LandArea: 48)) 
+		(OUTPUTS: 
+			(Population: 32)
+			(Water: 16)
+			(LandArea: 32)
+			(Food: 48)
+			(FoodWaste: 16))) EU: 9.2506
+(TRANSFORM (7x Housing) Atlantis
+		(INPUTS: 
+			(Population: 35)
+			(MetallicElements: 7)
+			(Timber: 35)
+			(Water: 21)
+			(MetallicAlloys: 7)) 
+		(OUTPUTS: 
+			(Population: 35)
+			(Water: 14)
+			(Housing: 7)
+			(HousingWaste: 7))) EU: 140.5074
+
+Schedule #5: 
+(TRANSFER (37.5 Water) From Brobdingnag To Atlantis) EU: 15.205
+(TRANSFER (50.0 MetallicElements) From Carpania To Atlantis) EU: 37.3867
+(TRANSFORM (35x Alloys) Atlantis
+		(INPUTS: 
+			(Population: 35)
+			(MetallicElements: 70)
+			(Water: 105)) 
+		(OUTPUTS: 
+			(Population: 35)
+			(Water: 70)
+			(MetallicAlloys: 70)
+			(MetallicWaste: 70))) EU: 55.9814
+(TRANSFORM (7x Housing) Atlantis
+		(INPUTS: 
+			(Population: 35)
+			(MetallicElements: 7)
+			(Timber: 35)
+			(Water: 21)
+			(MetallicAlloys: 7)) 
+		(OUTPUTS: 
+			(Population: 35)
+			(Water: 14)
+			(Housing: 7)
+			(HousingWaste: 7))) EU: 263.6485
+(TRANSFER (27.62 Water) From Atlantis To Brobdingnag) EU: -7.2654
+(TRANSFER (20.72 Water) From Atlantis To Erewhon) EU: -5.627
+(TRANSFER (5.75 MetallicElements) From Atlantis To Brobdingnag) EU: -2.9508
+(TRANSFORM (7x Housing) Atlantis
+		(INPUTS: 
+			(Population: 35)
+			(MetallicElements: 7)
+			(Timber: 35)
+			(Water: 21)
+			(MetallicAlloys: 7)) 
+		(OUTPUTS: 
+			(Population: 35)
+			(Water: 14)
+			(Housing: 7)
+			(HousingWaste: 7))) EU: 140.5074
+
+Schedule #6: 
+(TRANSFER (50.0 MetallicElements) From Carpania To Atlantis) EU: 39.9564
+(TRANSFORM (35x Alloys) Atlantis
+		(INPUTS: 
+			(Population: 35)
+			(MetallicElements: 70)
+			(Water: 105)) 
+		(OUTPUTS: 
+			(Population: 35)
+			(Water: 70)
+			(MetallicAlloys: 70)
+			(MetallicWaste: 70))) EU: 65.6023
+(TRANSFORM (17x Food) Atlantis
+		(INPUTS: 
+			(Population: 34)
+			(Timber: 34)
+			(Water: 51)
+			(LandArea: 51)) 
+		(OUTPUTS: 
+			(Population: 34)
+			(Water: 17)
+			(LandArea: 34)
+			(Food: 51)
+			(FoodWaste: 17))) EU: 194.0229
+(TRANSFORM (7x Housing) Atlantis
+		(INPUTS: 
+			(Population: 35)
+			(MetallicElements: 7)
+			(Timber: 35)
+			(Water: 21)
+			(MetallicAlloys: 7)) 
+		(OUTPUTS: 
+			(Population: 35)
+			(Water: 14)
+			(Housing: 7)
+			(HousingWaste: 7))) EU: 263.6485
+(TRANSFER (5.75 MetallicElements) From Atlantis To Erewhon) EU: -3.176
+(TRANSFER (57.88 MetallicElements) From Erewhon To Atlantis) EU: 34.6423
+(TRANSFER (12.75 Food) From Atlantis To Carpania) EU: -12.9739
+(TRANSFORM (7x Housing) Atlantis
+		(INPUTS: 
+			(Population: 35)
+			(MetallicElements: 7)
+			(Timber: 35)
+			(Water: 21)
+			(MetallicAlloys: 7)) 
+		(OUTPUTS: 
+			(Population: 35)
+			(Water: 14)
+			(Housing: 7)
+			(HousingWaste: 7))) EU: 140.5074
+
+Schedule #7: 
+(TRANSFER (28.75 Water) From Atlantis To Brobdingnag) EU: -8.6734
+(TRANSFER (55.0 MetallicElements) From Dinotopia To Atlantis) EU: 42.3038
+(TRANSFORM (28x Alloys) Atlantis
+		(INPUTS: 
+			(Population: 28)
+			(MetallicElements: 56)
+			(Water: 84)) 
+		(OUTPUTS: 
+			(Population: 28)
+			(Water: 56)
+			(MetallicAlloys: 56)
+			(MetallicWaste: 56))) EU: 44.7309
+(TRANSFORM (7x Housing) Atlantis
+		(INPUTS: 
+			(Population: 35)
+			(MetallicElements: 7)
+			(Timber: 35)
+			(Water: 21)
+			(MetallicAlloys: 7)) 
+		(OUTPUTS: 
+			(Population: 35)
+			(Water: 14)
+			(Housing: 7)
+			(HousingWaste: 7))) EU: 263.6485
+(TRANSFORM (14x Electronics) Atlantis
+		(INPUTS: 
+			(Population: 14)
+			(MetallicElements: 42)
+			(Water: 42)
+			(MetallicAlloys: 28)) 
+		(OUTPUTS: 
+			(Population: 14)
+			(Water: 28)
+			(Electronics: 28)
+			(ElectronicWaste: 14))) EU: -3.5165
+(TRANSFER (21.25 Timber) From Atlantis To Carpania) EU: -2.8932
+(TRANSFER (15.94 Timber) From Atlantis To Dinotopia) EU: -2.2974
+(TRANSFORM (7x Housing) Atlantis
+		(INPUTS: 
+			(Population: 35)
+			(MetallicElements: 7)
+			(Timber: 35)
+			(Water: 21)
+			(MetallicAlloys: 7)) 
+		(OUTPUTS: 
+			(Population: 35)
+			(Water: 14)
+			(Housing: 7)
+			(HousingWaste: 7))) EU: 140.5074
+
+Schedule #8: 
+(TRANSFER (28.75 Water) From Atlantis To Brobdingnag) EU: -8.6734
+(TRANSFER (55.0 MetallicElements) From Dinotopia To Atlantis) EU: 42.3038
+(TRANSFORM (28x Alloys) Atlantis
+		(INPUTS: 
+			(Population: 28)
+			(MetallicElements: 56)
+			(Water: 84)) 
+		(OUTPUTS: 
+			(Population: 28)
+			(Water: 56)
+			(MetallicAlloys: 56)
+			(MetallicWaste: 56))) EU: 44.7309
+(TRANSFORM (7x Housing) Atlantis
+		(INPUTS: 
+			(Population: 35)
+			(MetallicElements: 7)
+			(Timber: 35)
+			(Water: 21)
+			(MetallicAlloys: 7)) 
+		(OUTPUTS: 
+			(Population: 35)
+			(Water: 14)
+			(Housing: 7)
+			(HousingWaste: 7))) EU: 263.6485
+(TRANSFORM (14x Electronics) Atlantis
+		(INPUTS: 
+			(Population: 14)
+			(MetallicElements: 42)
+			(Water: 42)
+			(MetallicAlloys: 28)) 
+		(OUTPUTS: 
+			(Population: 14)
+			(Water: 28)
+			(Electronics: 28)
+			(ElectronicWaste: 14))) EU: -3.5165
+(TRANSFORM (16x Food) Atlantis
+		(INPUTS: 
+			(Population: 32)
+			(Timber: 32)
+			(Water: 48)
+			(LandArea: 48)) 
+		(OUTPUTS: 
+			(Population: 32)
+			(Water: 16)
+			(LandArea: 32)
+			(Food: 48)
+			(FoodWaste: 16))) EU: 10.961
+(TRANSFER (55.0 MetallicElements) From Erewhon To Atlantis) EU: 30.3605
+(TRANSFORM (7x Housing) Atlantis
+		(INPUTS: 
+			(Population: 35)
+			(MetallicElements: 7)
+			(Timber: 35)
+			(Water: 21)
+			(MetallicAlloys: 7)) 
+		(OUTPUTS: 
+			(Population: 35)
+			(Water: 14)
+			(Housing: 7)
+			(HousingWaste: 7))) EU: 140.5074
+
+Schedule #9: 
+(TRANSFER (28.75 Water) From Atlantis To Brobdingnag) EU: -8.6734
+(TRANSFER (55.0 MetallicElements) From Dinotopia To Atlantis) EU: 42.3038
+(TRANSFORM (28x Alloys) Atlantis
+		(INPUTS: 
+			(Population: 28)
+			(MetallicElements: 56)
+			(Water: 84)) 
+		(OUTPUTS: 
+			(Population: 28)
+			(Water: 56)
+			(MetallicAlloys: 56)
+			(MetallicWaste: 56))) EU: 44.7309
+(TRANSFORM (7x Housing) Atlantis
+		(INPUTS: 
+			(Population: 35)
+			(MetallicElements: 7)
+			(Timber: 35)
+			(Water: 21)
+			(MetallicAlloys: 7)) 
+		(OUTPUTS: 
+			(Population: 35)
+			(Water: 14)
+			(Housing: 7)
+			(HousingWaste: 7))) EU: 263.6485
+(TRANSFORM (14x Electronics) Atlantis
+		(INPUTS: 
+			(Population: 14)
+			(MetallicElements: 42)
+			(Water: 42)
+			(MetallicAlloys: 28)) 
+		(OUTPUTS: 
+			(Population: 14)
+			(Water: 28)
+			(Electronics: 28)
+			(ElectronicWaste: 14))) EU: -3.5165
+(TRANSFER (21.25 Timber) From Atlantis To Carpania) EU: -2.8932
+(TRANSFER (70.62 Timber) From Carpania To Atlantis) EU: 7.317
+(TRANSFORM (7x Housing) Atlantis
+		(INPUTS: 
+			(Population: 35)
+			(MetallicElements: 7)
+			(Timber: 35)
+			(Water: 21)
+			(MetallicAlloys: 7)) 
+		(OUTPUTS: 
+			(Population: 35)
+			(Water: 14)
+			(Housing: 7)
+			(HousingWaste: 7))) EU: 140.5074
+
+Schedule #10: 
+(TRANSFER (55.0 MetallicElements) From Brobdingnag To Atlantis) EU: 45.2149
+(TRANSFORM (17x Food) Atlantis
+		(INPUTS: 
+			(Population: 34)
+			(Timber: 34)
+			(Water: 51)
+			(LandArea: 51)) 
+		(OUTPUTS: 
+			(Population: 34)
+			(Water: 17)
+			(LandArea: 34)
+			(Food: 51)
+			(FoodWaste: 17))) EU: 227.0543
+(TRANSFORM (17x Food) Atlantis
+		(INPUTS: 
+			(Population: 34)
+			(Timber: 34)
+			(Water: 51)
+			(LandArea: 51)) 
+		(OUTPUTS: 
+			(Population: 34)
+			(Water: 17)
+			(LandArea: 34)
+			(Food: 51)
+			(FoodWaste: 17))) EU: 194.0229
+(TRANSFER (25.5 Food) From Atlantis To Brobdingnag) EU: -13.7698
+(TRANSFER (13.0 Timber) From Atlantis To Brobdingnag) EU: -2.1529
+(TRANSFORM (15x Food) Atlantis
+		(INPUTS: 
+			(Population: 30)
+			(Timber: 30)
+			(Water: 45)
+			(LandArea: 45)) 
+		(OUTPUTS: 
+			(Population: 30)
+			(Water: 15)
+			(LandArea: 30)
+			(Food: 45)
+			(FoodWaste: 15))) EU: 10.2466
+(TRANSFORM (14x Alloys) Atlantis
+		(INPUTS: 
+			(Population: 14)
+			(MetallicElements: 28)
+			(Water: 42)) 
+		(OUTPUTS: 
+			(Population: 14)
+			(Water: 28)
+			(MetallicAlloys: 28)
+			(MetallicWaste: 28))) EU: 11.5027
+(TRANSFORM (7x Housing) Atlantis
+		(INPUTS: 
+			(Population: 35)
+			(MetallicElements: 7)
+			(Timber: 35)
+			(Water: 21)
+			(MetallicAlloys: 7)) 
+		(OUTPUTS: 
+			(Population: 35)
+			(Water: 14)
+			(Housing: 7)
+			(HousingWaste: 7))) EU: 140.5074

@@ -1,0 +1,323 @@
+
+==========================================================================
+Important Variables:
+--------------------
+Centric Country: Atlantis
+Resource Input File: inputs/complex_resource_resources.xlsx
+Country Input File: inputs/complex_resource_countries.xlsx
+Output File: outputs/basic_resource_output_schedule.txt
+Output Count: 10
+Depth Bound: 8
+Frontier Size: 40
+Gamma: 0.95
+C: -0.01
+k: 1
+x_0: 0
+Import Percent: 0.5
+Export Percent: 0.25
+==========================================================================
+Execution Time (s): 25.503
+==========================================================================
+
+Schedule #1: 
+(TRANSFORM (50x Timber) Atlantis
+		(INPUTS: 
+			(Population: 100)
+			(Water: 150)
+			(LandArea: 150)) 
+		(OUTPUTS: 
+			(Population: 100)
+			(Timber: 500)
+			(Water: 50)
+			(LandArea: 100))) EU: -0.1
+(TRANSFER (37.5 Housing) From Brobdingnag To Atlantis) EU: 507.1365
+(TRANSFER (75.0 Electronics) From Dinotopia To Atlantis) EU: 83.6559
+(TRANSFER (350.0 MetallicElements) From Carpania To Atlantis) EU: 102.9092
+(TRANSFORM (50x Food) Atlantis
+		(INPUTS: 
+			(Population: 100)
+			(Timber: 100)
+			(Water: 150)
+			(LandArea: 150)) 
+		(OUTPUTS: 
+			(Population: 100)
+			(Water: 50)
+			(LandArea: 100)
+			(Food: 150)
+			(FoodWaste: 50))) EU: 145.8017
+(TRANSFER (0.5 Manufacturing) From Erewhon To Atlantis) EU: 129.0693
+(TRANSFER (37.5 Housing) From Dinotopia To Atlantis) EU: 392.1625
+(TRANSFORM (1x Manufacturing) Atlantis
+		(INPUTS: 
+			(Population: 100)
+			(Timber: 150)
+			(Water: 100)
+			(LandArea: 75)
+			(MetallicAlloys: 20)
+			(Electronics: 100)) 
+		(OUTPUTS: 
+			(Population: 90)
+			(Water: 50)
+			(LandArea: 65)
+			(Manufacturing: 15)
+			(MetallicWaste: 2)
+			(ElectronicWaste: 10)
+			(ManufacturingWaste: 10))) EU: 3714.5186
+
+Schedule #2: 
+(TRANSFORM (1x Manufacturing) Atlantis
+		(INPUTS: 
+			(Population: 100)
+			(Timber: 150)
+			(Water: 100)
+			(LandArea: 75)
+			(MetallicAlloys: 20)
+			(Electronics: 100)) 
+		(OUTPUTS: 
+			(Population: 90)
+			(Water: 50)
+			(LandArea: 65)
+			(Manufacturing: 15)
+			(MetallicWaste: 2)
+			(ElectronicWaste: 10)
+			(ManufacturingWaste: 10))) EU: 10794.75
+(TRANSFER (4.0 Manufacturing) From Atlantis To Erewhon) EU: -1.0
+(TRANSFER (2.5 Manufacturing) From Erewhon To Atlantis) EU: 892.5989
+(TRANSFER (1.25 Manufacturing) From Erewhon To Atlantis) EU: 423.6343
+(TRANSFER (3.94 Manufacturing) From Atlantis To Brobdingnag) EU: -1.0
+(TRANSFER (2.95 Manufacturing) From Atlantis To Brobdingnag) EU: -1.0
+(TRANSFER (12.5 Electronics) From Atlantis To Carpania) EU: -7.0095
+(TRANSFER (3.95 Manufacturing) From Brobdingnag To Atlantis) EU: 1090.0837
+
+Schedule #3: 
+(TRANSFORM (1x Manufacturing) Atlantis
+		(INPUTS: 
+			(Population: 100)
+			(Timber: 150)
+			(Water: 100)
+			(LandArea: 75)
+			(MetallicAlloys: 20)
+			(Electronics: 100)) 
+		(OUTPUTS: 
+			(Population: 90)
+			(Water: 50)
+			(LandArea: 65)
+			(Manufacturing: 15)
+			(MetallicWaste: 2)
+			(ElectronicWaste: 10)
+			(ManufacturingWaste: 10))) EU: 10794.75
+(TRANSFER (4.0 Manufacturing) From Atlantis To Erewhon) EU: -1.0
+(TRANSFER (2.5 Manufacturing) From Erewhon To Atlantis) EU: 892.5989
+(TRANSFER (1.25 Manufacturing) From Erewhon To Atlantis) EU: 423.6343
+(TRANSFER (3.94 Manufacturing) From Atlantis To Brobdingnag) EU: -1.0
+(TRANSFER (2.95 Manufacturing) From Atlantis To Brobdingnag) EU: -1.0
+(TRANSFER (0.62 Manufacturing) From Erewhon To Atlantis) EU: 176.6809
+(TRANSFER (3.95 Manufacturing) From Brobdingnag To Atlantis) EU: 1090.0837
+
+Schedule #4: 
+(TRANSFORM (1x Manufacturing) Atlantis
+		(INPUTS: 
+			(Population: 100)
+			(Timber: 150)
+			(Water: 100)
+			(LandArea: 75)
+			(MetallicAlloys: 20)
+			(Electronics: 100)) 
+		(OUTPUTS: 
+			(Population: 90)
+			(Water: 50)
+			(LandArea: 65)
+			(Manufacturing: 15)
+			(MetallicWaste: 2)
+			(ElectronicWaste: 10)
+			(ManufacturingWaste: 10))) EU: 10794.75
+(TRANSFER (0.5 Manufacturing) From Carpania To Atlantis) EU: 183.233
+(TRANSFER (4.12 Manufacturing) From Atlantis To Carpania) EU: -1.0
+(TRANSFER (2.31 Manufacturing) From Carpania To Atlantis) EU: 784.3106
+(TRANSFER (3.67 Manufacturing) From Atlantis To Brobdingnag) EU: -1.0
+(TRANSFER (2.75 Manufacturing) From Atlantis To Brobdingnag) EU: -1.0
+(TRANSFER (1.16 Manufacturing) From Carpania To Atlantis) EU: 335.536
+(TRANSFER (3.71 Manufacturing) From Brobdingnag To Atlantis) EU: 1025.8365
+
+Schedule #5: 
+(TRANSFORM (1x Manufacturing) Atlantis
+		(INPUTS: 
+			(Population: 100)
+			(Timber: 150)
+			(Water: 100)
+			(LandArea: 75)
+			(MetallicAlloys: 20)
+			(Electronics: 100)) 
+		(OUTPUTS: 
+			(Population: 90)
+			(Water: 50)
+			(LandArea: 65)
+			(Manufacturing: 15)
+			(MetallicWaste: 2)
+			(ElectronicWaste: 10)
+			(ManufacturingWaste: 10))) EU: 10794.75
+(TRANSFER (0.5 Manufacturing) From Carpania To Atlantis) EU: 183.233
+(TRANSFER (4.12 Manufacturing) From Atlantis To Carpania) EU: -1.0
+(TRANSFER (2.31 Manufacturing) From Carpania To Atlantis) EU: 784.3106
+(TRANSFER (3.67 Manufacturing) From Atlantis To Brobdingnag) EU: -1.0
+(TRANSFER (2.75 Manufacturing) From Atlantis To Brobdingnag) EU: -1.0
+(TRANSFORM (45x Food) Atlantis
+		(INPUTS: 
+			(Population: 90)
+			(Timber: 90)
+			(Water: 135)
+			(LandArea: 135)) 
+		(OUTPUTS: 
+			(Population: 90)
+			(Water: 45)
+			(LandArea: 90)
+			(Food: 135)
+			(FoodWaste: 45))) EU: 106.3623
+(TRANSFER (3.71 Manufacturing) From Brobdingnag To Atlantis) EU: 1025.8365
+
+Schedule #6: 
+(TRANSFORM (1x Manufacturing) Atlantis
+		(INPUTS: 
+			(Population: 100)
+			(Timber: 150)
+			(Water: 100)
+			(LandArea: 75)
+			(MetallicAlloys: 20)
+			(Electronics: 100)) 
+		(OUTPUTS: 
+			(Population: 90)
+			(Water: 50)
+			(LandArea: 65)
+			(Manufacturing: 15)
+			(MetallicWaste: 2)
+			(ElectronicWaste: 10)
+			(ManufacturingWaste: 10))) EU: 10794.75
+(TRANSFER (0.5 Manufacturing) From Carpania To Atlantis) EU: 183.233
+(TRANSFER (4.12 Manufacturing) From Atlantis To Carpania) EU: -1.0
+(TRANSFER (2.31 Manufacturing) From Carpania To Atlantis) EU: 784.3106
+(TRANSFER (3.67 Manufacturing) From Atlantis To Brobdingnag) EU: -1.0
+(TRANSFER (2.75 Manufacturing) From Atlantis To Brobdingnag) EU: -1.0
+(TRANSFER (0.5 Manufacturing) From Erewhon To Atlantis) EU: 137.4432
+(TRANSFER (3.71 Manufacturing) From Brobdingnag To Atlantis) EU: 1025.8365
+
+Schedule #7: 
+(TRANSFORM (1x Manufacturing) Atlantis
+		(INPUTS: 
+			(Population: 100)
+			(Timber: 150)
+			(Water: 100)
+			(LandArea: 75)
+			(MetallicAlloys: 20)
+			(Electronics: 100)) 
+		(OUTPUTS: 
+			(Population: 90)
+			(Water: 50)
+			(LandArea: 65)
+			(Manufacturing: 15)
+			(MetallicWaste: 2)
+			(ElectronicWaste: 10)
+			(ManufacturingWaste: 10))) EU: 10794.75
+(TRANSFER (0.5 Manufacturing) From Carpania To Atlantis) EU: 183.233
+(TRANSFER (4.12 Manufacturing) From Atlantis To Carpania) EU: -1.0
+(TRANSFER (2.31 Manufacturing) From Carpania To Atlantis) EU: 784.3106
+(TRANSFER (3.67 Manufacturing) From Atlantis To Brobdingnag) EU: -1.0
+(TRANSFER (2.75 Manufacturing) From Atlantis To Brobdingnag) EU: -1.0
+(TRANSFER (175.0 MetallicElements) From Atlantis To Erewhon) EU: -14.5784
+(TRANSFER (3.71 Manufacturing) From Brobdingnag To Atlantis) EU: 1025.8365
+
+Schedule #8: 
+(TRANSFORM (1x Manufacturing) Atlantis
+		(INPUTS: 
+			(Population: 100)
+			(Timber: 150)
+			(Water: 100)
+			(LandArea: 75)
+			(MetallicAlloys: 20)
+			(Electronics: 100)) 
+		(OUTPUTS: 
+			(Population: 90)
+			(Water: 50)
+			(LandArea: 65)
+			(Manufacturing: 15)
+			(MetallicWaste: 2)
+			(ElectronicWaste: 10)
+			(ManufacturingWaste: 10))) EU: 10794.75
+(TRANSFER (0.5 Manufacturing) From Carpania To Atlantis) EU: 183.233
+(TRANSFER (4.12 Manufacturing) From Atlantis To Carpania) EU: -1.0
+(TRANSFER (2.31 Manufacturing) From Carpania To Atlantis) EU: 784.3106
+(TRANSFER (3.67 Manufacturing) From Atlantis To Brobdingnag) EU: -1.0
+(TRANSFER (2.75 Manufacturing) From Atlantis To Brobdingnag) EU: -1.0
+(TRANSFER (37.5 Housing) From Erewhon To Atlantis) EU: 435.8901
+(TRANSFER (3.71 Manufacturing) From Brobdingnag To Atlantis) EU: 1025.8365
+
+Schedule #9: 
+(TRANSFORM (1x Manufacturing) Atlantis
+		(INPUTS: 
+			(Population: 100)
+			(Timber: 150)
+			(Water: 100)
+			(LandArea: 75)
+			(MetallicAlloys: 20)
+			(Electronics: 100)) 
+		(OUTPUTS: 
+			(Population: 90)
+			(Water: 50)
+			(LandArea: 65)
+			(Manufacturing: 15)
+			(MetallicWaste: 2)
+			(ElectronicWaste: 10)
+			(ManufacturingWaste: 10))) EU: 10794.75
+(TRANSFER (0.5 Manufacturing) From Carpania To Atlantis) EU: 183.233
+(TRANSFER (4.12 Manufacturing) From Atlantis To Carpania) EU: -1.0
+(TRANSFER (2.31 Manufacturing) From Carpania To Atlantis) EU: 784.3106
+(TRANSFER (3.67 Manufacturing) From Atlantis To Brobdingnag) EU: -1.0
+(TRANSFER (2.75 Manufacturing) From Atlantis To Brobdingnag) EU: -1.0
+(TRANSFORM (18x Housing) Atlantis
+		(INPUTS: 
+			(Population: 90)
+			(MetallicElements: 18)
+			(Timber: 90)
+			(Water: 54)
+			(MetallicAlloys: 18)) 
+		(OUTPUTS: 
+			(Population: 90)
+			(Water: 36)
+			(Housing: 18)
+			(HousingWaste: 18))) EU: 164.4805
+(TRANSFER (3.71 Manufacturing) From Brobdingnag To Atlantis) EU: 1025.8365
+
+Schedule #10: 
+(TRANSFORM (1x Manufacturing) Atlantis
+		(INPUTS: 
+			(Population: 100)
+			(Timber: 150)
+			(Water: 100)
+			(LandArea: 75)
+			(MetallicAlloys: 20)
+			(Electronics: 100)) 
+		(OUTPUTS: 
+			(Population: 90)
+			(Water: 50)
+			(LandArea: 65)
+			(Manufacturing: 15)
+			(MetallicWaste: 2)
+			(ElectronicWaste: 10)
+			(ManufacturingWaste: 10))) EU: 10794.75
+(TRANSFER (4.0 Manufacturing) From Atlantis To Erewhon) EU: -1.0
+(TRANSFER (2.5 Manufacturing) From Erewhon To Atlantis) EU: 892.5989
+(TRANSFER (3.62 Manufacturing) From Atlantis To Brobdingnag) EU: -1.0
+(TRANSFER (2.72 Manufacturing) From Atlantis To Brobdingnag) EU: -1.0
+(TRANSFER (0.5 Manufacturing) From Carpania To Atlantis) EU: 145.7817
+(TRANSFORM (18x Housing) Atlantis
+		(INPUTS: 
+			(Population: 90)
+			(MetallicElements: 18)
+			(Timber: 90)
+			(Water: 54)
+			(MetallicAlloys: 18)) 
+		(OUTPUTS: 
+			(Population: 90)
+			(Water: 36)
+			(Housing: 18)
+			(HousingWaste: 18))) EU: 15.9785
+(TRANSFER (3.67 Manufacturing) From Brobdingnag To Atlantis) EU: 1014.4987
