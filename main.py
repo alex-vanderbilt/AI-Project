@@ -1,7 +1,7 @@
 from simulation import Simulation
 from time import time
 from transfer_templates import housing, alloys, electronics, food, timber, manufacturing
-from globals import DEPTH_BOUND, FRONTIER_MAX_SIZE, MY_COUNTRY, GAMMA, C,  K, X_0, IMPORT_PERCENT, EXPORT_PERCENT
+from globals import DEPTH_BOUND, FRONTIER_MAX_SIZE, MY_COUNTRY, GAMMA, C,  K, X_0, IMPORT_PERCENT, EXPORT_PERCENT, SHORT_OUTPUT
 
 
 def main():
@@ -35,15 +35,22 @@ def run_simulation(input_country_file: str, input_resource_file: str, output_fil
     output_string += "==========================================================================\n"
     try:
         for i in range(0, output_count):
-            output_string += "\nSchedule #" + str(i + 1) + ": \n"
-            current_result = result_priority_queue.get()
-            current_schedule = current_result.partial_schedule
-            for world_state in current_schedule:
-                current_state = world_state[0]
+            if SHORT_OUTPUT:
+                current_result = result_priority_queue.get()
+                current_schedule = current_result.partial_schedule
+                world_state = current_schedule[len(current_schedule) - 1]
                 current_state_expected_utility = world_state[1]
-                output_string += str(current_state) + " EU: " + str(round(current_state_expected_utility, 4)) + "\n"
+                output_string += "EU: " + str(round(current_state_expected_utility, 4)) + "\n"
+            else:
+                output_string += "\nSchedule #" + str(i + 1) + ": \n"
+                current_result = result_priority_queue.get()
+                current_schedule = current_result.partial_schedule
+                for world_state in current_schedule:
+                    current_state = world_state[0]
+                    current_state_expected_utility = world_state[1]
+                    output_string += str(current_state) + " EU: " + str(round(current_state_expected_utility, 4)) + "\n"
         print(output_string)
-        write_output(output_filename, output_string)
+        # write_output(output_filename, output_string)
     except:
         print("ERROR: Not enough output schedules generated. Adjust global variables and try again")
 

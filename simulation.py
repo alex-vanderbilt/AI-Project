@@ -1,5 +1,6 @@
 from globals import GAMMA, MY_COUNTRY, C, K, X_0, IMPORT_PERCENT, EXPORT_PERCENT, MINIMIZE_MULTIPLIER,\
-    MINIMIZATION_FACTOR, TRANSFERABLE_RESOURCES, PRINT_WHILE_SEARCHING
+    MINIMIZATION_FACTOR, TRANSFERABLE_RESOURCES, PRINT_WHILE_SEARCHING, RESOURCE_THRESHOLD, \
+    UNDER_UTILIZATION_THRESHOLD, OVERCONSUMPTION_THRESHOLD
 from models import Transfer, Transform, Schedule, Country, ResourceWeight
 
 import pandas as pd
@@ -122,13 +123,24 @@ class Simulation:
     def state_quality(self, input_country: Country) -> float:
         country_resources = input_country.resources
         negative_resources_found = False
+        overconsumption_found = False
+        under_resource_threshold = False
         state_quality = 0.0
         for current_resource in country_resources.keys():
             resource_quantity = country_resources[current_resource]
             resource_weight = next((resource for resource in self.resource_weight_list if resource.name == current_resource), None).resource_weight
+            if current_resource in RESOURCE_THRESHOLD:
+                current_resource_threshold = RESOURCE_THRESHOLD[current_resource] * UNDER_UTILIZATION_THRESHOLD
+                overconsumption_threshold = RESOURCE_THRESHOLD[current_resource] * OVERCONSUMPTION_THRESHOLD
+                if resource_quantity - current_resource_threshold < 0:
+                    under_resource_threshold = True
+                if resource_quantity - overconsumption_threshold > 0:
+                    overconsumption_found = True
             state_quality += (resource_quantity * resource_weight)
             if resource_quantity < 0: negative_resources_found = True
         normalized_quality = state_quality / country_resources["R1"]
+        if under_resource_threshold: normalized_quality *= 0.8
+        elif overconsumption_found: normalized_quality *= 0.5
         return normalized_quality - 1000 if negative_resources_found else normalized_quality
 
     # The probabilty a given state will succeed is different depending on whether we are performing a Transform or Transfer
