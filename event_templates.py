@@ -1,4 +1,4 @@
-from models import Transform
+from models import Transform, RandomEvent
 
 # Represents the Housing transform with some of my own changes
 housing = Transform(transform_name="Housing",
@@ -29,3 +29,12 @@ timber = Transform(transform_name="Timber",
 manufacturing = Transform(transform_name="Manufacturing",
                           input_resources={"R1": 100, "R3": 150, "R4": 100, "R5": 75, "R21": 20, "R22": 100},
                           output_resources={"R1": 90, "R4": 50, "R5": 65, "R25": 15, "R21'": 2, "R22'": 10, "R25'": 10})
+
+
+
+
+# Newly added Random Events:
+tornado = RandomEvent(random_event_name="Tornado Hit",
+                      event_multiplier=0.5,
+                      probability_of_success=0.1,
+                      resources_effected_list=["R1", "R3", "R4", "R5", "R21", "R22"])

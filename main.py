@@ -1,6 +1,6 @@
 from simulation import Simulation
 from time import time
-from transfer_templates import housing, alloys, electronics, food, timber, manufacturing
+from event_templates import housing, alloys, electronics, food, timber, manufacturing
 from globals import DEPTH_BOUND, FRONTIER_MAX_SIZE, MY_COUNTRY, GAMMA, C,  K, X_0, IMPORT_PERCENT, EXPORT_PERCENT, SHORT_OUTPUT
 
 

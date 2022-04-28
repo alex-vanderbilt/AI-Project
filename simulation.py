@@ -129,6 +129,7 @@ class Simulation:
         for current_resource in country_resources.keys():
             resource_quantity = country_resources[current_resource]
             resource_weight = next((resource for resource in self.resource_weight_list if resource.name == current_resource), None).resource_weight
+            # Checking resource threshold
             if current_resource in RESOURCE_THRESHOLD:
                 current_resource_threshold = RESOURCE_THRESHOLD[current_resource] * UNDER_UTILIZATION_THRESHOLD
                 overconsumption_threshold = RESOURCE_THRESHOLD[current_resource] * OVERCONSUMPTION_THRESHOLD
