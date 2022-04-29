@@ -32,9 +32,43 @@ manufacturing = Transform(transform_name="Manufacturing",
 
 
 
-
 # Newly added Random Events:
 tornado = RandomEvent(random_event_name="Tornado Hit",
-                      event_multiplier=0.5,
-                      probability_of_success=0.1,
-                      resources_effected_list=["R1", "R3", "R4", "R5", "R21", "R22"])
+                      event_multiplier=0.8,
+                      probability_of_success=0.5,
+                      resources_effected_list=["R1", "R3", "R4", "R5", "R24"])
+
+earth_quake = RandomEvent(random_event_name="Earth Quake",
+                          event_multiplier=0.7,
+                          probability_of_success=0.5,
+                          resources_effected_list=["R1", "R23"])
+
+fire = RandomEvent(random_event_name="Wild Fire",
+                   event_multiplier=0.7,
+                   probability_of_success=0.5,
+                   resources_effected_list=["R1", "R3", "R5"])
+
+tsunami = RandomEvent(random_event_name="tsunami",
+                      event_multiplier=0.7,
+                      probability_of_success=0.5,
+                      resources_effected_list=["R1", "R4", "R24"])
+
+space_exploration = RandomEvent(random_event_name="Discovered Space Exploration",
+                                event_multiplier=5,
+                                probability_of_success=0.2,
+                                resources_effected_list=["R4"])
+
+buried_treasure = RandomEvent(random_event_name="Buried Treasure Found",
+                              event_multiplier=3,
+                              probability_of_success=0.2,
+                              resources_effected_list=["R2"])
+
+nuclear_fusion = RandomEvent(random_event_name="Nuclear Fusion Discovered",
+                             event_multiplier=3,
+                             probability_of_success=0.2,
+                             resources_effected_list=["R21", "R22"])
+
+universal_recycling = RandomEvent(random_event_name="Universal Recycling Discovered",
+                                  event_multiplier=0,
+                                  probability_of_success=0.5,
+                                  resources_effected_list=["R21'", "R22'", "R23'", "R24'"])

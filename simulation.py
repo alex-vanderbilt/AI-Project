@@ -1,29 +1,34 @@
-from globals import GAMMA, MY_COUNTRY, C, K, X_0, IMPORT_PERCENT, EXPORT_PERCENT, MINIMIZE_MULTIPLIER,\
+from globals import GAMMA, MY_COUNTRY, C, K, X_0, PLAY_STYLE, MINIMIZE_MULTIPLIER,\
     MINIMIZATION_FACTOR, TRANSFERABLE_RESOURCES, PRINT_WHILE_SEARCHING, RESOURCE_THRESHOLD, \
     UNDER_UTILIZATION_THRESHOLD, OVERCONSUMPTION_THRESHOLD
-from models import Transfer, Transform, Schedule, Country, ResourceWeight
+from models import Transfer, Transform, Schedule, Country, ResourceWeight, RandomEvent
 
 import pandas as pd
 import numpy as np
 from queue import PriorityQueue
 from copy import deepcopy
-
+from random import choice
 
 # The Simulation class is used to implement the forward, depth-first, heuristic based searching algorithm
 # It is responsible for loading in input Country and Resource data as well as generating all potential schedules and
 # sorting them based on expected utility which it calculates.
 class Simulation:
     transform_templates: list
+    random_events_list: list
     initial_states_file: str
     resource_input_filename: str
     country_list: list
     resource_weight_list: list
     result_list: PriorityQueue
     visited_scheduled: list
+    import_percent: float
+    export_percent: float
+
 
     # When initializing a Simulation object we immediately load the input Country and Resource information
-    def __init__(self, transform_templates: list, initial_states_file: str, resource_input_filename: str) -> None:
+    def __init__(self, transform_templates: list, random_events_list: list, initial_states_file: str, resource_input_filename: str) -> None:
         self.transform_templates = transform_templates
+        self.random_events_list = random_events_list
         self.initial_states_file = initial_states_file
         self.resource_input_filename = resource_input_filename
         self.country_list = []
@@ -32,6 +37,7 @@ class Simulation:
         self.load_country_data()
         self.resource_weight_list = []
         self.load_resource_weights()
+        self.set_play_style()
 
     # Load country data is used to take an input excel file and read in the countries and their initial states
     def load_country_data(self) -> None:
@@ -88,7 +94,7 @@ class Simulation:
 
     # Generating all successor states given the current state of the world which include transforms and transfers
     def generate_successors(self, current_world_state: list) -> list:
-        return self.generate_transforms(current_world_state) + self.generate_transfers(current_world_state)
+        return self.generate_transforms(current_world_state) + self.generate_transfers(current_world_state) + self.apply_random_events(current_world_state)
 
     # Undiscounted Reward (AKA Reward) is defined as:
     #   R(c_i, s_j) = Q_end(c_i, s_j) – Q_start(c_i, s_j)
@@ -150,6 +156,8 @@ class Simulation:
             return self.transfer_success_probability(current_world_state, next_world_state, depth, type_of_action)
         if isinstance(type_of_action, Transform):
             return self.transform_success_probability(depth)
+        if isinstance(type_of_action, RandomEvent):
+            return 1
 
     # Transforms are generated using the input list of transform templates
     def generate_transforms(self, current_world_state: list) -> list:
@@ -173,13 +181,29 @@ class Simulation:
                 if country is not my_country:
                     # We base our generated transfers on the IMPORT and EXPORT percents, defined in globals.py
                     if country.resources[resource] > 0:
-                        import_transfer = Transfer(current_world_state, country.name, MY_COUNTRY, (resource, IMPORT_PERCENT * country.resources[resource]))
+                        import_transfer = Transfer(current_world_state, country.name, MY_COUNTRY, (resource, self.import_percent * country.resources[resource]))
                         transfers.append([import_transfer.execute(), import_transfer])
                     if my_country.resources[resource] > 0:
-                        export_transfer = Transfer(current_world_state, MY_COUNTRY, country.name, (resource, EXPORT_PERCENT * my_country.resources[resource]))
+                        export_transfer = Transfer(current_world_state, MY_COUNTRY, country.name, (resource, self.export_percent * my_country.resources[resource]))
                         transfers.append([export_transfer.execute(), export_transfer])
 
         return transfers
+
+    def apply_random_events(self, current_world_state: list) -> list:
+        event_to_apply = choice(self.random_events_list)
+        return [[event_to_apply.execute(current_world_state), event_to_apply]]
+
+    def set_play_style(self) -> None:
+        if PLAY_STYLE == "Reserved":
+            self.import_percent = 0.4
+            self.export_percent = 0.4
+        elif PLAY_STYLE == "Moderate":
+            self.import_percent = 0.35
+            self.export_percent = 0.50
+        else:
+            # Assume Aggressive play style
+            self.import_percent = 0.5
+            self.export_percent = 0.25
 
     # Transfer success probability is used to calculate the probability a country will participate in a given schedule
     # Currently transfers are restricted to only involve two countries, one of which we are being represented by

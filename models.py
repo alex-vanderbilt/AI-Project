@@ -156,9 +156,9 @@ class RandomEvent:
         random_number = randint(0, 10)
         if random_number * .1 <= self.probability_of_success:
             self.was_successful = True
-
+        current_world_state = deepcopy(current_world_state)
         if self.was_successful:
-            current_world_state = deepcopy(current_world_state)
+            # Currently Random Events are only effecting our country, not the whole world. This may change.
             my_country = next((country for country in current_world_state if country.name == MY_COUNTRY), None)
             for resource in self.resources_effected_list:
                 remaining_quantity = my_country.resources[resource] * self.event_multiplier
@@ -166,7 +166,10 @@ class RandomEvent:
                     my_country.resources[resource] = remaining_quantity
                 else:
                     my_country.resources[resource] = 0
-            return current_world_state
 
-    def to_string(self):
-        return ""
+        self.was_successful = False
+        return current_world_state
+
+    def to_string(self, resource_names: list) -> str:
+        output_string = "(RANDOM EVENT: " + self.random_event_name + ")"
+        return output_string

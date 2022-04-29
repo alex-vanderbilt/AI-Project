@@ -9,10 +9,9 @@ C = -.01
 K = 1
 X_0 = 0
 
-# Transfer Variables
-IMPORT_PERCENT = 0.5
-EXPORT_PERCENT = 0.25
 TRANSFERABLE_RESOURCES = ['R2', 'R3', "R4", 'R21', 'R22', 'R23', "R24", "R25"]
+# Acceptable values: Reserved, Moderate, Aggressive
+PLAY_STYLE = "Aggressive"
 
 # Transform Variables
 MINIMIZE_MULTIPLIER = True

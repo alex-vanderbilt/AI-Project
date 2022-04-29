@@ -1,7 +1,8 @@
 from simulation import Simulation
 from time import time
-from event_templates import housing, alloys, electronics, food, timber, manufacturing
-from globals import DEPTH_BOUND, FRONTIER_MAX_SIZE, MY_COUNTRY, GAMMA, C,  K, X_0, IMPORT_PERCENT, EXPORT_PERCENT, SHORT_OUTPUT
+from event_templates import housing, alloys, electronics, food, timber, manufacturing, \
+    tornado, earth_quake, fire, tsunami, space_exploration, buried_treasure, nuclear_fusion, universal_recycling
+from globals import DEPTH_BOUND, FRONTIER_MAX_SIZE, MY_COUNTRY, GAMMA, C,  K, X_0, SHORT_OUTPUT
 
 
 def main():
@@ -13,6 +14,7 @@ def main():
 
 def run_simulation(input_country_file: str, input_resource_file: str, output_filename: str, output_count: int) -> None:
     game_simulation = Simulation(transform_templates=[housing, alloys, electronics, food, timber, manufacturing],
+                                 random_events_list=[tornado, earth_quake, fire, tsunami, space_exploration, buried_treasure, nuclear_fusion, universal_recycling],
                                  initial_states_file=input_country_file,
                                  resource_input_filename=input_resource_file)
     start_time = time()
@@ -24,7 +26,7 @@ def run_simulation(input_country_file: str, input_resource_file: str, output_fil
                            ("Country Input File:", input_country_file), ("Output File:", output_filename),
                            ("Output Count:", output_count), ("Depth Bound:", DEPTH_BOUND),
                            ("Frontier Size:", FRONTIER_MAX_SIZE), ("Gamma:", GAMMA), ("C:", C), ("k:", K),
-                           ("x_0:", X_0), ("Import Percent:", IMPORT_PERCENT), ("Export Percent:", EXPORT_PERCENT)]
+                           ("x_0:", X_0)]
 
     output_string = "\n==========================================================================\n"
     output_string += 'Important Variables:\n--------------------\n'
