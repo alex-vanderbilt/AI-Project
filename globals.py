@@ -19,7 +19,7 @@ MINIMIZATION_FACTOR = 10
 
 # Debug Variable
 PRINT_WHILE_SEARCHING = False
-SHORT_OUTPUT = True
+SHORT_OUTPUT = False
 
 # Country Resource Threshold goal:
 RESOURCE_THRESHOLD = {'R2': 500, 'R3': 600, 'R4': 400, 'R5': 400}

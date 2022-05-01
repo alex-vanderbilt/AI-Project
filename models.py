@@ -137,7 +137,7 @@ class Transform:
         output_string += "))"
         return output_string
 
-
+# RandomEvent is used to represent random events that can occur in schedules
 class RandomEvent:
     random_event_name: str
     event_multiplier: float
@@ -158,7 +158,6 @@ class RandomEvent:
             self.was_successful = True
         current_world_state = deepcopy(current_world_state)
         if self.was_successful:
-            # Currently Random Events are only effecting our country, not the whole world. This may change.
             my_country = next((country for country in current_world_state if country.name == MY_COUNTRY), None)
             for resource in self.resources_effected_list:
                 remaining_quantity = my_country.resources[resource] * self.event_multiplier

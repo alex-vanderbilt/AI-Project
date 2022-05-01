@@ -189,10 +189,12 @@ class Simulation:
 
         return transfers
 
+    # Used to apply random schedule events that can occur during schedule generation
     def apply_random_events(self, current_world_state: list) -> list:
         event_to_apply = choice(self.random_events_list)
         return [[event_to_apply.execute(current_world_state), event_to_apply]]
 
+    # Allows the play style to be set based on global input
     def set_play_style(self) -> None:
         if PLAY_STYLE == "Reserved":
             self.import_percent = 0.4

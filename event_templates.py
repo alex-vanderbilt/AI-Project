@@ -38,10 +38,10 @@ tornado = RandomEvent(random_event_name="Tornado Hit",
                       probability_of_success=0.5,
                       resources_effected_list=["R1", "R3", "R4", "R5", "R24"])
 
-earth_quake = RandomEvent(random_event_name="Earth Quake",
-                          event_multiplier=0.7,
-                          probability_of_success=0.5,
-                          resources_effected_list=["R1", "R23"])
+earthquake = RandomEvent(random_event_name="Earthquake",
+                         event_multiplier=0.7,
+                         probability_of_success=0.5,
+                         resources_effected_list=["R1", "R23"])
 
 fire = RandomEvent(random_event_name="Wild Fire",
                    event_multiplier=0.7,

@@ -1,7 +1,7 @@
 from simulation import Simulation
 from time import time
 from event_templates import housing, alloys, electronics, food, timber, manufacturing, \
-    tornado, earth_quake, fire, tsunami, space_exploration, buried_treasure, nuclear_fusion, universal_recycling
+    tornado, earthquake, fire, tsunami, space_exploration, buried_treasure, nuclear_fusion, universal_recycling
 from globals import DEPTH_BOUND, FRONTIER_MAX_SIZE, MY_COUNTRY, GAMMA, C,  K, X_0, SHORT_OUTPUT
 
 
@@ -14,7 +14,7 @@ def main():
 
 def run_simulation(input_country_file: str, input_resource_file: str, output_filename: str, output_count: int) -> None:
     game_simulation = Simulation(transform_templates=[housing, alloys, electronics, food, timber, manufacturing],
-                                 random_events_list=[tornado, earth_quake, fire, tsunami, space_exploration, buried_treasure, nuclear_fusion, universal_recycling],
+                                 random_events_list=[tornado, earthquake, fire, tsunami, space_exploration, buried_treasure, nuclear_fusion, universal_recycling],
                                  initial_states_file=input_country_file,
                                  resource_input_filename=input_resource_file)
     start_time = time()
@@ -52,7 +52,7 @@ def run_simulation(input_country_file: str, input_resource_file: str, output_fil
                     current_state_expected_utility = world_state[1]
                     output_string += str(current_state) + " EU: " + str(round(current_state_expected_utility, 4)) + "\n"
         print(output_string)
-        # write_output(output_filename, output_string)
+        write_output(output_filename, output_string)
     except:
         print("ERROR: Not enough output schedules generated. Adjust global variables and try again")
 
